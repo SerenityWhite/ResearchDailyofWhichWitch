@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 818faeb691d0a3d4388bdab062e1ce51
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Aparajita
+  fontNames:
+  - Aparajita
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2075095f09ecf624aac5f4a879247afe, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
