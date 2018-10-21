@@ -53,9 +53,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: d3f42dcebc4caa84bad3e84951110fa0, type: 2}
   mSprites:
+  - name: autumnST
+    x: 0
+    y: 39
+    width: 640
+    height: 360
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: button
-    x: 996
-    y: 963
+    x: 1677
+    y: 1609
     width: 192
     height: 63
     borderLeft: 0
@@ -67,10 +80,23 @@ MonoBehaviour:
     paddingTop: 7
     paddingBottom: 7
   - name: GameLogo
-    x: 641
-    y: 882
+    x: 643
+    y: 1475
     width: 354
     height: 212
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: locked-padlock
+    x: 1282
+    y: 1175
+    width: 394
+    height: 512
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -105,9 +131,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: mark
+    x: 1284
+    y: 1689
+    width: 244
+    height: 51
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 8
+    paddingRight: 12
+    paddingTop: 11
+    paddingBottom: 10
   - name: namingBox
-    x: 641
-    y: 819
+    x: 643
+    y: 1412
     width: 473
     height: 62
     borderLeft: 0
@@ -118,11 +157,24 @@ MonoBehaviour:
     paddingRight: 5
     paddingTop: 0
     paddingBottom: 5
-  - name: SpringBG
-    x: 0
-    y: 269
-    width: 820
-    height: 492
+  - name: springST
+    x: 643
+    y: 1688
+    width: 640
+    height: 360
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: summerST
+    x: 641
+    y: 1042
+    width: 640
+    height: 360
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -132,8 +184,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: systemBox
-    x: 641
-    y: 1095
+    x: 1284
+    y: 1741
     width: 641
     height: 307
     borderLeft: 0
@@ -145,8 +197,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Warning
-    x: 641
-    y: 799
+    x: 998
+    y: 1479
     width: 221
     height: 19
     borderLeft: 0
@@ -158,8 +210,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: WhatsYour
-    x: 996
-    y: 1027
+    x: 1677
+    y: 1673
     width: 291
     height: 67
     borderLeft: 0
@@ -170,6 +222,32 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: winterST
+    x: 0
+    y: 400
+    width: 640
+    height: 361
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Witch's_House-SW
+    x: 998
+    y: 1499
+    width: 189
+    height: 188
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 1
+    paddingTop: 6
+    paddingBottom: 7
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
