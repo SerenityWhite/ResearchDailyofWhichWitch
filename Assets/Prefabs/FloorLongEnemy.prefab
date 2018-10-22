@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 114388877448180818}
   m_Layer: 0
   m_Name: EnemyMush(1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2207,7 +2207,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9, y: 4, z: 3}
+  m_Size: {x: 2.9, y: 4, z: 8}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!65 &65248941128846598
 BoxCollider:
@@ -2584,10 +2584,14 @@ MonoBehaviour:
   enemyState: 0
   moveSpeed: 0.05
   mushAnim: {fileID: 0}
-  floor: {fileID: 0}
   offsetX: 14
   startPosX: 0
   limitPosX: 0
+  moveDistance: 12.3
+  targetPos: {fileID: 0}
+  magicHitEF: {fileID: 1322833190763988, guid: 94fd657c248674045bb59b8eb0247807, type: 2}
+  enemyTime: 0
+  hittedTime: 0.5
 --- !u!114 &114400842761284906
 MonoBehaviour:
   m_ObjectHideFlags: 1

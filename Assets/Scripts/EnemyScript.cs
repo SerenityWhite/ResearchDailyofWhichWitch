@@ -20,13 +20,18 @@ public class EnemyScript : MonoBehaviour
     Vector3 enemyPos;
     public float startPosX;
     public float limitPosX;
+    public float moveDistance;
+    public Transform targetPos;
+    public GameObject magicHitEF;
+    public float enemyTime;
+    public float hittedTime;
 
     void Start ()
     {
         mushAnim = GetComponent<Animation>();
         enemyPos = GetComponent<Transform>().position;
         startPosX = enemyPos.x;
-        limitPosX = startPosX - 12.3f;
+        limitPosX = startPosX - moveDistance;
     }
 	
 	void Update ()
@@ -50,17 +55,32 @@ public class EnemyScript : MonoBehaviour
                 transform.Translate(0, 0, moveSpeed);
                 transform.rotation = Quaternion.Euler(new Vector3(0, 90f, 0));
 
-                if (transform.position.x > limitPosX + 12.3f)
+                if (transform.position.x > limitPosX + moveDistance)
                 {
-                    transform.position = new Vector3(limitPosX + 12.3f, transform.position.y, transform.position.z);
+                    transform.position = new Vector3(limitPosX + moveDistance, transform.position.y, transform.position.z);
                     enemyState = ENEMYSTATE.RunL;
                 }
+
                 break;
             case ENEMYSTATE.Attack:
                 mushAnim.Play("Attack");
                 break;
             case ENEMYSTATE.Damage:
                 mushAnim.Play("Damage");
+                enemyTime += Time.deltaTime;
+                if(enemyTime > hittedTime)
+                {
+                    enemyTime = 0;
+                    if (targetPos.position.x > transform.position.x)
+                    {
+                        enemyState = ENEMYSTATE.RunR;
+                    }
+
+                    if (targetPos.position.x < transform.position.x)
+                    {
+                        enemyState = ENEMYSTATE.RunL;
+                    }
+                }
                 break;
             case ENEMYSTATE.Death:
                 mushAnim.Play("Death");
@@ -72,9 +92,31 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
             enemyState = ENEMYSTATE.Attack;
+        }
+
+        if(other.gameObject.tag == "Magic")
+        {
+            Instantiate(magicHitEF, transform.position, transform.rotation);
+            enemyState = ENEMYSTATE.Damage;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (targetPos.position.x > transform.position.x)
+            {
+                enemyState = ENEMYSTATE.RunR;
+            }
+
+            if (targetPos.position.x < transform.position.x)
+            {
+                enemyState = ENEMYSTATE.RunL;
+            }
         }
     }
 }

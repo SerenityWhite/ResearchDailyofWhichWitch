@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Ladder
   - MovingBlock
+  - Magic
+  - Enemy
   layers:
   - Default
   - TransparentFX

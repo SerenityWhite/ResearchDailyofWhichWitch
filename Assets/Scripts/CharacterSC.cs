@@ -11,8 +11,17 @@ public class CharacterSC : MonoBehaviour
     public int jumpCount = 1;
     Rigidbody rigidBody;
     public bool ladderCol = false;
+    public GameObject magicSkill;
+    public Transform magicPos;
+    public float attackCool;
+    public float attackTime;
+    public GameObject playerCamera;
+    Vector3 cameraPos;
+    public float oriTime;
+    public float ShakeTime;
+    public bool hitted = false;
 
-	void Start ()
+    void Start ()
     {
         playerAnim = GetComponent<Animation>();
         rigidBody = GetComponent<Rigidbody>();
@@ -20,6 +29,7 @@ public class CharacterSC : MonoBehaviour
 
     void Update ()
     {
+        cameraPos = playerCamera.GetComponent<Transform>().position;
         playerAnim.Play("idle");
 
         if (transform.position.x < -6f)
@@ -54,14 +64,23 @@ public class CharacterSC : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            playerAnim.Play("attack");
-        }
-
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z);
+        }
+
+        if(ladderCol == false)
+        {
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                playerAnim.Play("attack");
+                attackTime += Time.deltaTime;
+                if (attackTime > attackCool)
+                {
+                    Instantiate(magicSkill, magicPos.position, magicPos.rotation);
+                    attackTime = 0;
+                }
+            }
         }
 
         if(ladderCol == true)
@@ -79,6 +98,18 @@ public class CharacterSC : MonoBehaviour
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 transform.Translate(0, -ladderSpeed, 0);
+            }
+        }
+
+        if(hitted == true)
+        {
+            oriTime += Time.deltaTime;
+            playerCamera.transform.position = new Vector3(Random.Range(cameraPos.x - 0.3f, cameraPos.x + 0.3f), cameraPos.y, cameraPos.z);
+            if (oriTime > ShakeTime)
+            {
+                oriTime = 0;
+                playerCamera.transform.position = new Vector3(cameraPos.x, cameraPos.y, cameraPos.z);
+                hitted = false;
             }
         }
     }
@@ -110,6 +141,11 @@ public class CharacterSC : MonoBehaviour
         if (other.gameObject.tag == "Ladder")
         {
             ladderCol = true;
+        }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            hitted = true;
         }
     }
 

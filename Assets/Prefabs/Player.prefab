@@ -1246,6 +1246,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1692410575593796
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4265494733514410}
+  m_Layer: 0
+  m_Name: MagicPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1725282194676164
 GameObject:
   m_ObjectHideFlags: 1
@@ -1915,6 +1930,19 @@ Transform:
   m_Father: {fileID: 4166092114065542}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4265494733514410
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692410575593796}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0.28, y: 0, z: 0.57}
+  m_LocalScale: {x: 2.1786501, y: 2.178649, z: 2.1786504}
+  m_Children: []
+  m_Father: {fileID: 4662367622096778}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4266349521485928
 Transform:
   m_ObjectHideFlags: 1
@@ -2521,7 +2549,8 @@ Transform:
   m_LocalRotation: {x: 0.000000015454312, y: 0.000000015454312, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.9385382, y: 1.2555996, z: 0.32611388}
   m_LocalScale: {x: 1.53, y: 1.53, z: 1.53}
-  m_Children: []
+  m_Children:
+  - {fileID: 4265494733514410}
   m_Father: {fileID: 4844572242532270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3073,6 +3102,14 @@ MonoBehaviour:
   jumpPower: 30
   jumpCount: 1
   ladderCol: 0
+  magicSkill: {fileID: 1554949460300414, guid: eab1cedf938a61244ae25b7c06c0ee23, type: 2}
+  magicPos: {fileID: 4265494733514410}
+  attackCool: 0.1
+  attackTime: 0
+  playerCamera: {fileID: 0}
+  oriTime: 0
+  ShakeTime: 0.5
+  hitted: 0
 --- !u!137 &137694005504935314
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
