@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpringStage.unity
     guid: a77e143e519f09242bd07605e5405962
+  - enabled: 1
+    path: Assets/Scenes/SpringStage2.unity
+    guid: 4b07202508ad26b4c8f467c807a58e20
+  - enabled: 1
+    path: Assets/Scenes/SpringStage3.unity
+    guid: 39b79e0d256dedb45b2ffac917394368
+  - enabled: 1
+    path: Assets/Scenes/SpringStage4.unity
+    guid: 201e9bc4f422f684587a7bb12b269ed9
   m_configObjects: {}

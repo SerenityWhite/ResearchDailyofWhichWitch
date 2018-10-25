@@ -25,6 +25,8 @@ public class EnemyScript : MonoBehaviour
     public GameObject magicHitEF;
     public float enemyTime;
     public float hittedTime;
+    public int enemyDamage;
+    public float enemyHp;
 
     void Start ()
     {
@@ -36,6 +38,12 @@ public class EnemyScript : MonoBehaviour
 	
 	void Update ()
     {
+        if (enemyHp <= 0)
+        {
+            enemyHp = 0;
+            enemyState = ENEMYSTATE.Death;
+        }
+
         switch (enemyState)
         {
             case ENEMYSTATE.RunL:
@@ -83,23 +91,33 @@ public class EnemyScript : MonoBehaviour
                 }
                 break;
             case ENEMYSTATE.Death:
-                mushAnim.Play("Death");
+                StartCoroutine(DeathDelay());
                 break;
             default:
                 break;
         }
     }
 
+    IEnumerator DeathDelay()
+    {
+        mushAnim.Play("Death");
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+        StageManager.Instance().deadEnemy++;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
+            CharacterSC.Instance().playerHP -= enemyDamage;
             enemyState = ENEMYSTATE.Attack;
         }
 
         if(other.gameObject.tag == "Magic")
         {
             Instantiate(magicHitEF, transform.position, transform.rotation);
+            enemyHp -= CharacterSC.Instance().playerAttackDamage;
             enemyState = ENEMYSTATE.Damage;
         }
     }

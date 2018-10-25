@@ -257,6 +257,8 @@ MonoBehaviour:
   magicHitEF: {fileID: 1322833190763988, guid: 94fd657c248674045bb59b8eb0247807, type: 2}
   enemyTime: 0
   hittedTime: 0.5
+  enemyDamage: 10
+  enemyHp: 100
 --- !u!137 &137115613719635004
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

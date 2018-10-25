@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class CharacterSC : MonoBehaviour
 {
+    static CharacterSC _instance = null;
+    public static CharacterSC Instance()
+    {
+        return _instance;
+    }
+
     public float moveSpeed = 0.1f;
     public float ladderSpeed;
     public Animation playerAnim;
@@ -20,17 +26,62 @@ public class CharacterSC : MonoBehaviour
     public float oriTime;
     public float ShakeTime;
     public bool hitted = false;
+    public float playerHP = 100f;
+    public float playerMP = 100f;
+    public float playerAttackDamage;
+    public UIProgressBar hpBar;
+    public UILabel hpTX;
+    public UIProgressBar mpBar;
+    public UILabel mpTX;
+    public float mpFillCool;
+    public float mpFillTime;
+    public GameObject mpFillEF;
+    public bool Up = false;
+    public bool Down = false;
+    public bool Left = false;
+    public bool Right = false;
+    public bool Attack = false;
 
     void Start ()
     {
         playerAnim = GetComponent<Animation>();
         rigidBody = GetComponent<Rigidbody>();
+
+        if (_instance == null)
+            _instance = this;
 	}
 
     void Update ()
     {
         cameraPos = playerCamera.GetComponent<Transform>().position;
         playerAnim.Play("idle");
+
+        if(playerHP <= 0)
+            playerHP = 0;
+
+        if (playerMP <= 0)
+            playerMP = 0;
+
+        if(playerHP >= 100)
+            playerHP = 100;
+
+        if (playerMP >= 100)
+           playerMP = 100;
+
+        hpBar.value = playerHP * 0.01f;
+        mpBar.value = playerMP * 0.01f;
+
+        hpTX.text = "" + (int)playerHP;
+        mpTX.text = "" + (int)playerMP;
+
+        mpFillTime += Time.deltaTime;
+
+        if (mpFillTime > mpFillCool)
+        {
+            playerMP += 10;
+            Instantiate(mpFillEF, transform.position, transform.rotation);
+            mpFillTime = 0;
+        }
 
         if (transform.position.x < -6f)
             transform.position = new Vector3(-6f, transform.position.y, transform.position.z);
@@ -75,9 +126,10 @@ public class CharacterSC : MonoBehaviour
             {
                 playerAnim.Play("attack");
                 attackTime += Time.deltaTime;
-                if (attackTime > attackCool)
+                if (attackTime > attackCool & playerMP > 0)
                 {
                     Instantiate(magicSkill, magicPos.position, magicPos.rotation);
+                    playerMP -= 10;
                     attackTime = 0;
                 }
             }
@@ -110,6 +162,51 @@ public class CharacterSC : MonoBehaviour
                 oriTime = 0;
                 playerCamera.transform.position = new Vector3(cameraPos.x, cameraPos.y, cameraPos.z);
                 hitted = false;
+            }
+        }
+
+        if(Up == true)
+        {
+            if (ladderCol == true)
+            {
+                transform.Translate(0, ladderSpeed, 0);
+            }
+        }
+
+        if(Down == true)
+        {
+            if (ladderCol == true)
+            {
+                transform.Translate(0, -ladderSpeed, 0);
+            }
+        }
+
+        if(Left == true)
+        {
+            playerAnim.Play("run");
+            transform.rotation = Quaternion.Euler(new Vector3(0, -90f, 0));
+            transform.Translate(0, 0, moveSpeed);
+        }
+
+        if(Right == true)
+        {
+            playerAnim.Play("run");
+            transform.rotation = Quaternion.Euler(new Vector3(0, 90f, 0));
+            transform.Translate(0, 0, moveSpeed);
+        }
+
+        if(Attack == true)
+        {
+            if (ladderCol == false)
+            {
+                playerAnim.Play("attack");
+                attackTime += Time.deltaTime;
+                if (attackTime > attackCool & playerMP > 0)
+                {
+                    Instantiate(magicSkill, magicPos.position, magicPos.rotation);
+                    playerMP -= 10;
+                    attackTime = 0;
+                }
             }
         }
     }
@@ -147,6 +244,11 @@ public class CharacterSC : MonoBehaviour
         {
             hitted = true;
         }
+
+        if(other.gameObject.tag == "Goal")
+        {
+            StageManager.Instance().goal = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -157,5 +259,82 @@ public class CharacterSC : MonoBehaviour
             rigidBody.useGravity = true;
             transform.position = new Vector3(transform.position.x, transform.position.y, -0.5f);
         }
+
+        if (other.gameObject.tag == "Goal")
+        {
+            StageManager.Instance().goal = false;
+        }
+    }
+
+    public void HpUp()
+    {
+        playerState.Instance().hpPotion -= 1;
+        playerHP += 10;
+    }
+
+    public void MpUp()
+    {
+        playerState.Instance().mpPotion -= 1;
+        playerMP += 30;
+    }
+
+    public void UpKey()
+    {
+        Up = true;
+    }
+
+    public void UpKeyRelease()
+    {
+        Up = false;
+    }
+
+    public void DownKey()
+    {
+        Down = true;
+    }
+
+    public void DownKeyRelease()
+    {
+        Down = false;
+    }
+
+    public void LeftKey()
+    {
+        Left = true;
+    }
+
+    public void LeftKeyRelease()
+    {
+        Left = false;
+    }
+
+    public void RightKey()
+    {
+        Right = true;
+    }
+
+    public void RightKeyRelease()
+    {
+        Right = false;
+    }
+
+    public void JumpKey()
+    {
+        if (jumpCount > 0)
+        {
+            rigidBody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            jumpCount = 0;
+        }
+    }
+
+    public void AttackKey()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z);
+        Attack = true;
+    }
+
+    public void AttackKeyRelease()
+    {
+        Attack = false;
     }
 }

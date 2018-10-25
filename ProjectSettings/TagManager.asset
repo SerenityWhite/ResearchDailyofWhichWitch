@@ -9,6 +9,7 @@ TagManager:
   - MovingBlock
   - Magic
   - Enemy
+  - Goal
   layers:
   - Default
   - TransparentFX

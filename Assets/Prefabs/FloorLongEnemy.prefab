@@ -2592,6 +2592,8 @@ MonoBehaviour:
   magicHitEF: {fileID: 1322833190763988, guid: 94fd657c248674045bb59b8eb0247807, type: 2}
   enemyTime: 0
   hittedTime: 0.5
+  enemyDamage: 15
+  enemyHp: 100
 --- !u!114 &114400842761284906
 MonoBehaviour:
   m_ObjectHideFlags: 1

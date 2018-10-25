@@ -2881,9 +2881,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1109001589042162}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -6, y: -3.4, z: -0.5}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.30000037, y: 0.3, z: 0.30000037}
   m_Children:
   - {fileID: 4662367622096778}
   - {fileID: 4014154809193728}
@@ -3110,6 +3110,21 @@ MonoBehaviour:
   oriTime: 0
   ShakeTime: 0.5
   hitted: 0
+  playerHP: 100
+  playerMP: 100
+  playerAttackDamage: 10
+  hpBar: {fileID: 0}
+  hpTX: {fileID: 0}
+  mpBar: {fileID: 0}
+  mpTX: {fileID: 0}
+  mpFillCool: 2
+  mpFillTime: 0
+  mpFillEF: {fileID: 1192537217244436, guid: 9e7c9c25183b1c141a923d91efffb5cd, type: 2}
+  Up: 0
+  Down: 0
+  Left: 0
+  Right: 0
+  Attack: 0
 --- !u!137 &137694005504935314
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
