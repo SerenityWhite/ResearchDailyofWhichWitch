@@ -47,6 +47,12 @@ public class result : MonoBehaviour
                 PlayerPrefs.SetInt("springST04ClearBool", playerState.Instance().springSTClearBool[3]);
             }
 
+            if (playerState.Instance().springSTClearBool[4] == 0)
+            {
+                playerState.Instance().springSTClearBool[4] = 1;
+                PlayerPrefs.SetInt("springST05ClearBool", playerState.Instance().springSTClearBool[4]);
+            }
+
             Application.LoadLevel(1);
         }
     }

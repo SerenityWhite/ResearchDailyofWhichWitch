@@ -250,6 +250,37 @@ public class StageManager : MonoBehaviour
                     }
                 }
 
+                if (playerState.Instance().stageNum == 5)
+                {
+                    if (playerState.Instance().springSTClearBool[4] == 0)
+                    {
+                        playerState.Instance().openStageNum = 6;
+                        PlayerPrefs.SetInt("openStageNum", playerState.Instance().openStageNum);
+                        plusGold = 3000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(1, 9);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime05", playTime);
+                            PlayerPrefs.SetString("ClearTime05", timeStr);
+                        }
+                    }
+
+                    if (playerState.Instance().springSTClearBool[4] == 1)
+                    {
+                        plusGold = 3000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(1, 9);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime05", playTime);
+                            PlayerPrefs.SetString("ClearTime05", timeStr);
+                        }
+                    }
+                }
+
                 clearState = CLEARSTATE.IDLE;
                 break;
 

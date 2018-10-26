@@ -19,8 +19,6 @@ public class CharacterSC : MonoBehaviour
     public bool ladderCol = false;
     public GameObject magicSkill;
     public Transform magicPos;
-    public float attackCool;
-    public float attackTime;
     public GameObject playerCamera;
     Vector3 cameraPos;
     public float oriTime;
@@ -40,7 +38,6 @@ public class CharacterSC : MonoBehaviour
     public bool Down = false;
     public bool Left = false;
     public bool Right = false;
-    public bool Attack = false;
 
     void Start ()
     {
@@ -78,8 +75,11 @@ public class CharacterSC : MonoBehaviour
 
         if (mpFillTime > mpFillCool)
         {
-            playerMP += 10;
-            Instantiate(mpFillEF, transform.position, transform.rotation);
+            if(playerMP < 100)
+            {
+                playerMP += 10;
+                Instantiate(mpFillEF, transform.position, transform.rotation);
+            }
             mpFillTime = 0;
         }
 
@@ -122,15 +122,13 @@ public class CharacterSC : MonoBehaviour
 
         if(ladderCol == false)
         {
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 playerAnim.Play("attack");
-                attackTime += Time.deltaTime;
-                if (attackTime > attackCool & playerMP > 0)
+                if(playerMP > 0)
                 {
                     Instantiate(magicSkill, magicPos.position, magicPos.rotation);
                     playerMP -= 10;
-                    attackTime = 0;
                 }
             }
         }
@@ -193,21 +191,6 @@ public class CharacterSC : MonoBehaviour
             playerAnim.Play("run");
             transform.rotation = Quaternion.Euler(new Vector3(0, 90f, 0));
             transform.Translate(0, 0, moveSpeed);
-        }
-
-        if(Attack == true)
-        {
-            if (ladderCol == false)
-            {
-                playerAnim.Play("attack");
-                attackTime += Time.deltaTime;
-                if (attackTime > attackCool & playerMP > 0)
-                {
-                    Instantiate(magicSkill, magicPos.position, magicPos.rotation);
-                    playerMP -= 10;
-                    attackTime = 0;
-                }
-            }
         }
     }
 
@@ -330,11 +313,14 @@ public class CharacterSC : MonoBehaviour
     public void AttackKey()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z);
-        Attack = true;
-    }
-
-    public void AttackKeyRelease()
-    {
-        Attack = false;
+        if (ladderCol == false)
+        {
+            playerAnim.Play("attack");
+            if (playerMP > 0)
+            {
+                Instantiate(magicSkill, magicPos.position, magicPos.rotation);
+                playerMP -= 10;
+            }
+        }
     }
 }

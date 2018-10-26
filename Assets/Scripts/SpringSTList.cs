@@ -66,4 +66,17 @@ public class SpringSTList : MonoBehaviour
             Application.LoadLevel(5);
         }
     }
+
+    public void Stage5UNLOCK()
+    {
+        if (playerState.Instance().openStageNum < 5)
+            LockStageTX.SetActive(true);
+
+        if (playerState.Instance().openStageNum >= 5)
+        {
+            playerState.Instance().stageNum = 5;
+            PlayerPrefs.SetInt("stageNum", playerState.Instance().stageNum);
+            Application.LoadLevel(6);
+        }
+    }
 }

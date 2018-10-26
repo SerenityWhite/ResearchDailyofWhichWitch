@@ -5459,11 +5459,7 @@ MonoBehaviour:
     mMethodName: AttackKey
     mParameters: []
     oneShot: 0
-  onRelease:
-  - mTarget: {fileID: 767333343}
-    mMethodName: AttackKeyRelease
-    mParameters: []
-    oneShot: 0
+  onRelease: []
   onSelect: []
   onDeselect: []
   onClick: []

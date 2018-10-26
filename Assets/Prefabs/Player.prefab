@@ -3104,7 +3104,7 @@ MonoBehaviour:
   ladderCol: 0
   magicSkill: {fileID: 1554949460300414, guid: eab1cedf938a61244ae25b7c06c0ee23, type: 2}
   magicPos: {fileID: 4265494733514410}
-  attackCool: 0.1
+  attackCool: 0.3
   attackTime: 0
   playerCamera: {fileID: 0}
   oriTime: 0
