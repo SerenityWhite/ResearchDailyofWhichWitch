@@ -73,6 +73,12 @@ public class StageManager : MonoBehaviour
             lastPlayTime = PlayerPrefs.GetFloat("playTime04");
         }
 
+        if (stageNum == 5)
+        {
+            stageName = "생명의 숲5";
+            lastPlayTime = PlayerPrefs.GetFloat("playTime05");
+        }
+
         stageNameObj.text = stageName;
     }
 	
