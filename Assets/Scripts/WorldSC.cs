@@ -33,12 +33,16 @@ public class WorldSC : MonoBehaviour
     public void WitchHouseClick()
     {
         witch.SetActive(true);
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         world.SetActive(false);
     }
 
     public void WorldBack()
     {
         world.SetActive(true);
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         witch.SetActive(false);
     }
 
@@ -55,5 +59,7 @@ public class WorldSC : MonoBehaviour
     public void SpringSTClick()
     {
         SpringSTList.SetActive(true);
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
     }
 }

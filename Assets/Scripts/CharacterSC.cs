@@ -110,6 +110,8 @@ public class CharacterSC : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                SoundSC.Instance().Sound.clip = SoundSC.Instance().Jump;
+                SoundSC.Instance().Sound.Play();
                 rigidBody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
                 jumpCount = 0;
             }
@@ -127,6 +129,8 @@ public class CharacterSC : MonoBehaviour
                 playerAnim.Play("attack");
                 if(playerMP > 0)
                 {
+                    SoundSC.Instance().Sound.clip = SoundSC.Instance().Attack;
+                    SoundSC.Instance().Sound.Play();
                     Instantiate(magicSkill, magicPos.position, magicPos.rotation);
                     playerMP -= 10;
                 }
@@ -305,6 +309,8 @@ public class CharacterSC : MonoBehaviour
     {
         if (jumpCount > 0)
         {
+            SoundSC.Instance().Sound.clip = SoundSC.Instance().Jump;
+            SoundSC.Instance().Sound.Play();
             rigidBody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             jumpCount = 0;
         }
@@ -318,6 +324,8 @@ public class CharacterSC : MonoBehaviour
             playerAnim.Play("attack");
             if (playerMP > 0)
             {
+                SoundSC.Instance().Sound.clip = SoundSC.Instance().Attack;
+                SoundSC.Instance().Sound.Play();
                 Instantiate(magicSkill, magicPos.position, magicPos.rotation);
                 playerMP -= 10;
             }

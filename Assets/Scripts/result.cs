@@ -53,6 +53,8 @@ public class result : MonoBehaviour
                 PlayerPrefs.SetInt("springST05ClearBool", playerState.Instance().springSTClearBool[4]);
             }
 
+            SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+            SoundSC.Instance().Sound.Play();
             Application.LoadLevel(1);
         }
     }

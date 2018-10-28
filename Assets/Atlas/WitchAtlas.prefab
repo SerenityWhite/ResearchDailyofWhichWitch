@@ -54,8 +54,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: d3f42dcebc4caa84bad3e84951110fa0, type: 2}
   mSprites:
   - name: attack
-    x: 2552
-    y: 42
+    x: 2397
+    y: 740
     width: 185
     height: 185
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 5
   - name: autumnST
-    x: 727
-    y: 321
+    x: 1924
+    y: 1302
     width: 640
     height: 360
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: autumnStone
-    x: 2646
-    y: 1271
+    x: 2565
+    y: 1441
     width: 93
     height: 84
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: backKey
-    x: 407
-    y: 17
+    x: 2656
+    y: 1130
     width: 41
     height: 44
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: bar
-    x: 2118
-    y: 61
+    x: 1348
+    y: 30
     width: 171
     height: 18
     borderLeft: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 3
   - name: button
-    x: 2118
-    y: 80
+    x: 2509
+    y: 1175
     width: 192
     height: 63
     borderLeft: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: GameLogo
-    x: 2010
-    y: 144
+    x: 245
+    y: 60
     width: 354
     height: 212
     borderLeft: 0
@@ -184,8 +184,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: HP
-    x: 1054
-    y: 4
+    x: 0
+    y: 2
     width: 135
     height: 14
     borderLeft: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: hpPotion
-    x: 462
-    y: 165
+    x: 2010
+    y: 38
     width: 107
     height: 107
     borderLeft: 0
@@ -236,8 +236,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 4
   - name: itemBox
-    x: 2536
-    y: 1193
+    x: 2702
+    y: 1130
     width: 109
     height: 108
     borderLeft: 0
@@ -249,8 +249,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 4
   - name: jump
-    x: 2365
-    y: 41
+    x: 2319
+    y: 926
     width: 186
     height: 186
     borderLeft: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: mapNameBox
-    x: 462
+    x: 600
     y: 8
     width: 455
     height: 98
@@ -314,8 +314,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: mark
-    x: 2011
-    y: 365
+    x: 245
+    y: 8
     width: 244
     height: 51
     borderLeft: 0
@@ -327,8 +327,8 @@ MonoBehaviour:
     paddingTop: 11
     paddingBottom: 10
   - name: menubox1
-    x: 0
-    y: 62
+    x: 2010
+    y: 146
     width: 461
     height: 210
     borderLeft: 0
@@ -340,8 +340,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: menubox2
-    x: 2319
-    y: 1144
+    x: 2506
+    y: 955
     width: 216
     height: 157
     borderLeft: 0
@@ -353,8 +353,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: MovingKey
-    x: 2565
-    y: 1304
+    x: 490
+    y: 8
     width: 58
     height: 51
     borderLeft: 0
@@ -379,8 +379,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: MP
-    x: 918
-    y: 4
+    x: 1056
+    y: 24
     width: 135
     height: 14
     borderLeft: 0
@@ -392,8 +392,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: mpPotion
-    x: 2010
-    y: 37
+    x: 2118
+    y: 39
     width: 107
     height: 106
     borderLeft: 0
@@ -405,8 +405,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 5
   - name: mpPotion1
-    x: 1210
-    y: 1
+    x: 1278
+    y: 109
     width: 86
     height: 105
     borderLeft: 0
@@ -418,8 +418,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: namingBox
-    x: 2319
-    y: 1081
+    x: 2509
+    y: 1239
     width: 473
     height: 62
     borderLeft: 0
@@ -431,8 +431,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 5
   - name: pause
-    x: 2565
-    y: 1625
+    x: 549
+    y: 22
     width: 29
     height: 37
     borderLeft: 0
@@ -470,8 +470,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: springStone
-    x: 2646
-    y: 1186
+    x: 2414
+    y: 61
     width: 93
     height: 84
     borderLeft: 0
@@ -483,8 +483,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: stageBox
-    x: 462
-    y: 118
+    x: 2509
+    y: 1128
     width: 146
     height: 46
     borderLeft: 0
@@ -496,8 +496,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: StatusBar
-    x: 0
-    y: 13
+    x: 2011
+    y: 368
     width: 406
     height: 48
     borderLeft: 0
@@ -509,8 +509,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: summerST
-    x: 1924
-    y: 1302
+    x: 727
+    y: 321
     width: 640
     height: 360
     borderLeft: 0
@@ -522,8 +522,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: summerStone
-    x: 2565
-    y: 1356
+    x: 2320
+    y: 61
     width: 93
     height: 84
     borderLeft: 0
@@ -548,8 +548,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Warning
-    x: 918
-    y: 19
+    x: 0
+    y: 17
     width: 221
     height: 19
     borderLeft: 0
@@ -561,7 +561,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: WhatsYour
-    x: 918
+    x: 1056
     y: 39
     width: 291
     height: 67
@@ -587,8 +587,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: winterStone
-    x: 2565
-    y: 1441
+    x: 2226
+    y: 61
     width: 93
     height: 84
     borderLeft: 0
@@ -612,6 +612,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: witchCat
+    x: 0
+    y: 37
+    width: 244
+    height: 235
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 56
+    paddingRight: 46
+    paddingTop: 64
+    paddingBottom: 51
   - name: witchlistBox
     x: 1370
     y: 718
@@ -639,8 +652,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: Witch's_House-SW
-    x: 2365
-    y: 228
+    x: 2319
+    y: 1113
     width: 189
     height: 188
     borderLeft: 0

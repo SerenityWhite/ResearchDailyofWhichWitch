@@ -110,6 +110,8 @@ public class EnemyScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            EnemySound.Instance().enemySound.clip = EnemySound.Instance().EnemyAttack;
+            EnemySound.Instance().enemySound.Play();
             CharacterSC.Instance().playerHP -= enemyDamage;
             enemyState = ENEMYSTATE.Attack;
         }

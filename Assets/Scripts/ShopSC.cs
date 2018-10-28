@@ -16,7 +16,7 @@ public class ShopSC : MonoBehaviour
 
     void Start ()
     {
-        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 공방에서 뵙는 건 꽤 오랜만인 것 같네요. 이번엔 뭐가 필요하시죠?";
+        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 공방에 어서오시라냥~ 이번엔 뭐가 필요하시냥?";
     }
 
 	void Update ()
@@ -26,75 +26,101 @@ public class ShopSC : MonoBehaviour
     
     public void RankOn()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         Rank.SetActive(true);
         MenuBox.SetActive(false);
-        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 최단 시간 정복! 한 번 도전해보는 건 어떨까요?";
+        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 최단 시간 정복! 한 번 도전해보는 건 어때냥?";
+        Rank.GetComponent<TweenPosition>().Play(true);
     }
 
     public void RankOff()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         Rank.SetActive(false);
         MenuBox.SetActive(true);
+        Rank.GetComponent<TweenPosition>().ResetToBeginning();
     }
 
     public void IventoryOn()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         inventory.SetActive(true);
         main.SetActive(false);
     }
 
     public void IventoryOff()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         inventory.SetActive(false);
         main.SetActive(true);
+        ItemIntroTX.text = "루나라는 이름 어떤 것 같냥? 커~다란 달밤에 " + PlayerPrefs.GetString("UserName") + "님이 데려와줬으니 그 날을 기념해서 스스로 지어봤다냥!";
     }
 
     public void BuyOn()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().ShopOpen;
+        SoundSC.Instance().Sound.Play();
         BuyList.SetActive(true);
         MenuBox.SetActive(false);
-        ItemIntroTX.text = "자, 어떤 걸 만들어볼까요?";
+        ItemIntroTX.text = "자, 이번엔 어떤 걸 만들어볼까냥?";
+        BuyList.GetComponent<TweenPosition>().Play(true);
     }
 
     public void BuyBack()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         BuyList.SetActive(false);
         MenuBox.SetActive(true);
         itemBuy[0].SetActive(false);
         itemBuy[1].SetActive(false);
-        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 연금술을 소홀히 하시면 실력이 늘지 않습니다.";
+        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님! 연금술을 소홀히 하시면 실력이 늘지 않는다냥.";
+        BuyList.GetComponent<TweenPosition>().ResetToBeginning();
     }
 
     public void SellOn()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().ShopOpen;
+        SoundSC.Instance().Sound.Play();
         SellList.SetActive(true);
         MenuBox.SetActive(false);
-        ItemIntroTX.text = "이번엔 어떤 것을 가져오셨습니까?";
+        ItemIntroTX.text = "이번엔 어떤 걸 가져오셨냥?";
+        SellList.GetComponent<TweenPosition>().Play(true);
     }
 
     public void SellBack()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
         SellList.SetActive(false);
         MenuBox.SetActive(true);
         itemSell[0].SetActive(false);
         itemSell[1].SetActive(false);
-        ItemIntroTX.text = "더 열심히 해서 부자가 되어 보자고요.";
+        ItemIntroTX.text = "더 열심히 해서 부~자가 되어 보자냥.";
+        SellList.GetComponent<TweenPosition>().ResetToBeginning();
     }
 
 
     //Buy로직
     public void HpPotionClick()
     {
-        if(playerState.Instance().gold >= 1000)
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
+        if (playerState.Instance().gold >= 1000)
         {
-            ItemIntroTX.text = "현재 " + PlayerPrefs.GetString("UserName") + "님이 보유한 골드는 " + playerState.Instance().gold + "이므로, HP 회복약의 합성이 가능합니다. 합성하시겠습니까?";
+            ItemIntroTX.text = "지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드다냥. 이 정도면 HP 회복약의 합성이 가능하다냥. 합성할 거냥?";
             itemBuy[0].SetActive(true);
             itemBuy[1].SetActive(false);
         }
 
         if (playerState.Instance().gold < 1000)
         {
-            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, HP 회복약을 합성하기엔 가지고 계신 골드가 부족한 것 같아요. 지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "입니다.";
+            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, HP 회복약을 합성하기엔 갖고 있는 골드가 부족하다냥. 지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드 밖에 안된다냥. 합성하고 싶으면 월드에서 골드를 더 구해오라냥.";
             itemBuy[0].SetActive(false);
             itemBuy[1].SetActive(false);
         }
@@ -102,12 +128,15 @@ public class ShopSC : MonoBehaviour
 
     public void HpPotionClickBuy()
     {
-        if(playerState.Instance().gold >= 1000)
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
+        if (playerState.Instance().gold >= 1000)
         {
             itemBuy[0].SetActive(false);
             playerState.Instance().gold -= 1000;
             playerState.Instance().hpPotion += 1;
-            ItemIntroTX.text = "HP 회복약 1개 합성 성공입니다.";
+            ItemIntroTX.text = "HP 회복약 1개 합성 성공이다냥!";
             PlayerPrefs.SetInt("gold", playerState.Instance().gold);
             PlayerPrefs.SetInt("hpPotion", playerState.Instance().hpPotion);
         }
@@ -121,16 +150,19 @@ public class ShopSC : MonoBehaviour
 
     public void MpPotionClick()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
         if (playerState.Instance().gold >= 700)
         {
-            ItemIntroTX.text = "현재 " + PlayerPrefs.GetString("UserName") + "님이 보유한 골드는 " + playerState.Instance().gold + "이므로, MP 회복약의 합성이 가능합니다. 합성하시겠습니까?";
+            ItemIntroTX.text = "지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드다냥. 이 정도면 MP 회복약의 합성이 가능하다냥. 합성할 거냥?";
             itemBuy[0].SetActive(false);
             itemBuy[1].SetActive(true);
         }
 
         if (playerState.Instance().gold < 700)
         {
-            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, MP 회복약을 합성하기엔 가지고 계신 골드가 부족한 것 같아요. 지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "입니다.";
+            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, MP 회복약을 합성하기엔 갖고 있는 골드가 부족하다냥. 지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드 밖에 안된다냥. 합성하고 싶으면 월드에서 골드를 더 구해오라냥.";
             itemBuy[0].SetActive(false);
             itemBuy[1].SetActive(false);
         }
@@ -138,12 +170,15 @@ public class ShopSC : MonoBehaviour
 
     public void MpPotionClickBuy()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
         if (playerState.Instance().gold >= 700)
         {
             itemBuy[1].SetActive(false);
             playerState.Instance().gold -= 700;
             playerState.Instance().mpPotion += 1;
-            ItemIntroTX.text = "MP 회복약 1개 합성 성공입니다.";
+            ItemIntroTX.text = "MP 회복약 1개 합성 성공이다냥!";
             PlayerPrefs.SetInt("gold", playerState.Instance().gold);
             PlayerPrefs.SetInt("mpPotion", playerState.Instance().mpPotion);
         }
@@ -158,16 +193,19 @@ public class ShopSC : MonoBehaviour
     //Sell로직
     public void HpPotionSellClick()
     {
-        if(playerState.Instance().hpPotion >= 1)
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
+        if (playerState.Instance().hpPotion >= 1)
         {
-            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님이 가지고 계신 HP 회복약을 분해해서 골드로 만들 수 있어요. 200골드를 얻을 수 있습니다. 분해하시겠습니까?";
+            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님이 갖고 있는 HP 회복약을 분해해서 골드로 만들 수 있다냥! 200골드를 얻을 수 있다냥. 분해하시겠냥?";
             itemSell[0].SetActive(true);
             itemSell[1].SetActive(false);
         }
 
         if(playerState.Instance().hpPotion < 1)
         {
-            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 분해할 HP 회복약이 없네요.";
+            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 분해할 HP 회복약이 없다냥. 빨리 구해오라냥.";
             itemSell[0].SetActive(false);
             itemSell[1].SetActive(false);
         }
@@ -175,12 +213,15 @@ public class ShopSC : MonoBehaviour
 
     public void HpPotionClickSell()
     {
-        if(playerState.Instance().hpPotion >= 1)
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
+        if (playerState.Instance().hpPotion >= 1)
         {
             itemSell[0].SetActive(false);
             playerState.Instance().gold += 200;
             playerState.Instance().hpPotion -= 1;
-            ItemIntroTX.text = "HP 회복약 1개를 분해해서 200골드를 얻었습니다.";
+            ItemIntroTX.text = "냐앙~ 냐앙~ 돈이다냥~ HP 회복약 1개를 분해해서 200골드를 얻었다냥!";
             PlayerPrefs.SetInt("gold", playerState.Instance().gold);
             PlayerPrefs.SetInt("hpPotion", playerState.Instance().hpPotion);
         }
@@ -194,16 +235,19 @@ public class ShopSC : MonoBehaviour
 
     public void MpPotionSellClick()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
         if (playerState.Instance().mpPotion >= 1)
         {
-            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님이 가지고 계신 MP 회복약을 분해해서 골드로 만들 수 있어요. 100골드를 얻을 수 있습니다. 분해하시겠습니까?";
+            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님이 갖고 있는 MP 회복약을 분해해서 골드로 만들 수 있다냥! 100골드를 얻을 수 있다냥. 분해하시겠냥?";
             itemSell[0].SetActive(false);
             itemSell[1].SetActive(true);
         }
 
         if (playerState.Instance().mpPotion < 1)
         {
-            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 분해할 MP 회복약이 없네요.";
+            ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 분해할 MP 회복약이 없다냥. 빨리 구해오라냥.";
             itemSell[0].SetActive(false);
             itemSell[1].SetActive(false);
         }
@@ -211,12 +255,15 @@ public class ShopSC : MonoBehaviour
 
     public void MpPotionClickSell()
     {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+
         if (playerState.Instance().mpPotion >= 1)
         {
             itemSell[1].SetActive(false);
             playerState.Instance().gold += 100;
             playerState.Instance().mpPotion -= 1;
-            ItemIntroTX.text = "MP 회복약 1개를 분해해서 100골드를 얻었습니다.";
+            ItemIntroTX.text = "냐앙~ 냐앙~ 돈이다냥~ MP 회복약 1개를 분해해서 100골드를 얻었다냥!";
             PlayerPrefs.SetInt("gold", playerState.Instance().gold);
             PlayerPrefs.SetInt("mpPotion", playerState.Instance().mpPotion);
         }

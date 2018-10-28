@@ -21,6 +21,8 @@ public class MagicSC : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
+            EnemySound.Instance().enemySound.clip = EnemySound.Instance().EnemyHit;
+            EnemySound.Instance().enemySound.Play();
             Destroy(gameObject);
         }
     }

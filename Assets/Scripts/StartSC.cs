@@ -5,10 +5,11 @@ using UnityEngine;
 public class StartSC : MonoBehaviour
 {
     public GameObject NamingBox;
+    public GameObject ClickSound;
 
-	void Start ()
+    void Start ()
     {
-		
+
 	}
 
 	void Update ()
@@ -16,6 +17,7 @@ public class StartSC : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             NamingBox.SetActive(true);
+            ClickSound.SetActive(true);
             gameObject.SetActive(false);
         }
 	}
