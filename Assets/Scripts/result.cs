@@ -53,6 +53,36 @@ public class result : MonoBehaviour
                 PlayerPrefs.SetInt("springST05ClearBool", playerState.Instance().springSTClearBool[4]);
             }
 
+            if (playerState.Instance().springSTClearBool[5] == 0)
+            {
+                playerState.Instance().springSTClearBool[5] = 1;
+                PlayerPrefs.SetInt("springST06ClearBool", playerState.Instance().springSTClearBool[5]);
+            }
+
+            if (playerState.Instance().springSTClearBool[6] == 0)
+            {
+                playerState.Instance().springSTClearBool[6] = 1;
+                PlayerPrefs.SetInt("springST07ClearBool", playerState.Instance().springSTClearBool[6]);
+            }
+
+            if (playerState.Instance().springSTClearBool[7] == 0)
+            {
+                playerState.Instance().springSTClearBool[7] = 1;
+                PlayerPrefs.SetInt("springST08ClearBool", playerState.Instance().springSTClearBool[7]);
+            }
+
+            if (playerState.Instance().springSTClearBool[8] == 0)
+            {
+                playerState.Instance().springSTClearBool[8] = 1;
+                PlayerPrefs.SetInt("springST09ClearBool", playerState.Instance().springSTClearBool[8]);
+            }
+
+            if (playerState.Instance().springSTClearBool[9] == 0)
+            {
+                playerState.Instance().springSTClearBool[9] = 1;
+                PlayerPrefs.SetInt("springST10ClearBool", playerState.Instance().springSTClearBool[9]);
+            }
+
             SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
             SoundSC.Instance().Sound.Play();
             Application.LoadLevel(1);

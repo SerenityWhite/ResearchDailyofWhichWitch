@@ -79,6 +79,36 @@ public class StageManager : MonoBehaviour
             lastPlayTime = PlayerPrefs.GetFloat("playTime05");
         }
 
+        if (stageNum == 6)
+        {
+            stageName = "생명의 숲6";
+            lastPlayTime = PlayerPrefs.GetFloat("playTime06");
+        }
+
+        if (stageNum == 7)
+        {
+            stageName = "생명의 숲7";
+            lastPlayTime = PlayerPrefs.GetFloat("playTime07");
+        }
+
+        if (stageNum == 8)
+        {
+            stageName = "생명의 숲8";
+            lastPlayTime = PlayerPrefs.GetFloat("playTime08");
+        }
+
+        if (stageNum == 9)
+        {
+            stageName = "생명의 숲9";
+            lastPlayTime = PlayerPrefs.GetFloat("playTime09");
+        }
+
+        if (stageNum == 10)
+        {
+            stageName = "생명의 숲10";
+            lastPlayTime = PlayerPrefs.GetFloat("playTime10");
+        }
+
         stageNameObj.text = stageName;
     }
 	
@@ -283,6 +313,159 @@ public class StageManager : MonoBehaviour
                         {
                             PlayerPrefs.SetFloat("playTime05", playTime);
                             PlayerPrefs.SetString("ClearTime05", timeStr);
+                        }
+                    }
+                }
+
+                if (playerState.Instance().stageNum == 6)
+                {
+                    if (playerState.Instance().springSTClearBool[5] == 0)
+                    {
+                        playerState.Instance().openStageNum = 7;
+                        PlayerPrefs.SetInt("openStageNum", playerState.Instance().openStageNum);
+                        plusGold = 4000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 6);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime06", playTime);
+                            PlayerPrefs.SetString("ClearTime06", timeStr);
+                        }
+                    }
+
+                    if (playerState.Instance().springSTClearBool[5] == 1)
+                    {
+                        plusGold = 4000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 6);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime06", playTime);
+                            PlayerPrefs.SetString("ClearTime06", timeStr);
+                        }
+                    }
+                }
+
+                if (playerState.Instance().stageNum == 7)
+                {
+                    if (playerState.Instance().springSTClearBool[6] == 0)
+                    {
+                        playerState.Instance().openStageNum = 8;
+                        PlayerPrefs.SetInt("openStageNum", playerState.Instance().openStageNum);
+                        plusGold = 4500;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 7);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime07", playTime);
+                            PlayerPrefs.SetString("ClearTime07", timeStr);
+                        }
+                    }
+
+                    if (playerState.Instance().springSTClearBool[6] == 1)
+                    {
+                        plusGold = 4500;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 7);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime07", playTime);
+                            PlayerPrefs.SetString("ClearTime07", timeStr);
+                        }
+                    }
+                }
+
+                if (playerState.Instance().stageNum == 8)
+                {
+                    if (playerState.Instance().springSTClearBool[7] == 0)
+                    {
+                        playerState.Instance().openStageNum = 9;
+                        PlayerPrefs.SetInt("openStageNum", playerState.Instance().openStageNum);
+                        plusGold = 5000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 8);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime08", playTime);
+                            PlayerPrefs.SetString("ClearTime08", timeStr);
+                        }
+                    }
+
+                    if (playerState.Instance().springSTClearBool[7] == 1)
+                    {
+                        plusGold = 5000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 8);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime08", playTime);
+                            PlayerPrefs.SetString("ClearTime08", timeStr);
+                        }
+                    }
+                }
+
+                if (playerState.Instance().stageNum == 9)
+                {
+                    if (playerState.Instance().springSTClearBool[8] == 0)
+                    {
+                        playerState.Instance().openStageNum = 10;
+                        PlayerPrefs.SetInt("openStageNum", playerState.Instance().openStageNum);
+                        plusGold = 5500;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 9);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime09", playTime);
+                            PlayerPrefs.SetString("ClearTime09", timeStr);
+                        }
+                    }
+
+                    if (playerState.Instance().springSTClearBool[8] == 1)
+                    {
+                        plusGold = 5500;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(2, 9);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime09", playTime);
+                            PlayerPrefs.SetString("ClearTime09", timeStr);
+                        }
+                    }
+                }
+
+                if (playerState.Instance().stageNum == 10)
+                {
+                    if (playerState.Instance().springSTClearBool[9] == 0)
+                    {
+                        plusGold = 7000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(4, 9);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime10", playTime);
+                            PlayerPrefs.SetString("ClearTime10", timeStr);
+                        }
+                    }
+
+                    if (playerState.Instance().springSTClearBool[9] == 1)
+                    {
+                        plusGold = 7000;
+                        playerState.Instance().gold += plusGold;
+                        plusSpringStone = Random.Range(4, 9);
+                        playerState.Instance().springStone += plusSpringStone;
+                        if (lastPlayTime > playTime)
+                        {
+                            PlayerPrefs.SetFloat("playTime10", playTime);
+                            PlayerPrefs.SetString("ClearTime10", timeStr);
                         }
                     }
                 }

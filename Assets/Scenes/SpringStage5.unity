@@ -7520,7 +7520,7 @@ MonoBehaviour:
   enemyTime: 0
   hittedTime: 0.5
   enemyDamage: 15
-  enemyHp: 140
+  enemyHp: 175
 --- !u!65 &726008930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16613,7 +16613,7 @@ MonoBehaviour:
   enemyTime: 0
   hittedTime: 0.5
   enemyDamage: 15
-  enemyHp: 175
+  enemyHp: 140
 --- !u!65 &1719995775
 BoxCollider:
   m_ObjectHideFlags: 0

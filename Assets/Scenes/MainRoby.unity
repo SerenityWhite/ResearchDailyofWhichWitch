@@ -10075,8 +10075,6 @@ MonoBehaviour:
   Sound: {fileID: 0}
   Jump: {fileID: 0}
   Attack: {fileID: 0}
-  EnemyAttack: {fileID: 0}
-  EnemyHit: {fileID: 0}
   Click: {fileID: 8300000, guid: 2498b88eaa1e8fb4597d09e83189555b, type: 3}
   ShopOpen: {fileID: 8300000, guid: 8d8b40f5f0812fb41b8e4d2b540a4d1f, type: 3}
   StageOpen: {fileID: 8300000, guid: 858db1f950eb4df4783d93f755a8c6e9, type: 3}
@@ -10989,7 +10987,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 2033981109}
+    mMethodName: Stage10UNLOCK
+    mParameters: []
+    oneShot: 0
 --- !u!65 &949367562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11112,7 +11114,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 2033981109}
+    mMethodName: Stage8UNLOCK
+    mParameters: []
+    oneShot: 0
 --- !u!65 &972165293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12288,7 +12294,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 2033981109}
+    mMethodName: Stage6UNLOCK
+    mParameters: []
+    oneShot: 0
 --- !u!65 &1076294582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15971,7 +15981,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 2033981109}
+    mMethodName: Stage9UNLOCK
+    mParameters: []
+    oneShot: 0
 --- !u!65 &1423803608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21583,7 +21597,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 2033981109}
+    mMethodName: Stage7UNLOCK
+    mParameters: []
+    oneShot: 0
 --- !u!65 &1896377391
 BoxCollider:
   m_ObjectHideFlags: 0

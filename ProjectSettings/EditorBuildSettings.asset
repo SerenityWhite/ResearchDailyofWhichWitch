@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 7487dd1749942ff439fe3a184d3d24c4
@@ -34,13 +31,13 @@ EditorBuildSettings:
     guid: 421cd668b786ee14f86286bcff9c9681
   - enabled: 1
     path: Assets/Scenes/SpringStage7.unity
-    guid: 3fe1019c47c66d74f851c08788209951
+    guid: f7902c027813a1b439fdd7aa14e9bc95
   - enabled: 1
     path: Assets/Scenes/SpringStage8.unity
-    guid: fce5e0ef8dffe7847839eee3067d19e1
+    guid: 14daa471ea2a8754bb22be7be255cbb5
   - enabled: 1
     path: Assets/Scenes/SpringStage9.unity
-    guid: f9b3da7d60cc9ac4d9add5139dbb1285
+    guid: 14563b7968da1de45a746d9c4d42c451
   - enabled: 1
     path: Assets/Scenes/SpringStage10.unity
     guid: 171ce579b0db4cf4c9d7d1c39f1b6eaf
