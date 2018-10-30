@@ -44,6 +44,8 @@ public class StageManager : MonoBehaviour
 
 	void Start ()
     {
+        Time.timeScale = 1;
+
         if (_instance == null)
             _instance = this;
 
@@ -172,11 +174,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(1, 5);
                         playerState.Instance().springStone += plusSpringStone;
-                        if(lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime01", playTime);
-                            PlayerPrefs.SetString("ClearTime01", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime01", playTime);
+                        PlayerPrefs.SetString("ClearTime01", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[0] == 1)
@@ -203,11 +202,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(1, 6);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime02", playTime);
-                            PlayerPrefs.SetString("ClearTime02", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime02", playTime);
+                        PlayerPrefs.SetString("ClearTime02", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[1] == 1)
@@ -234,11 +230,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(1, 7);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime03", playTime);
-                            PlayerPrefs.SetString("ClearTime03", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime03", playTime);
+                        PlayerPrefs.SetString("ClearTime03", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[2] == 1)
@@ -265,11 +258,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(1, 8);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime04", playTime);
-                            PlayerPrefs.SetString("ClearTime04", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime04", playTime);
+                        PlayerPrefs.SetString("ClearTime04", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[3] == 1)
@@ -296,11 +286,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(1, 9);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime05", playTime);
-                            PlayerPrefs.SetString("ClearTime05", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime05", playTime);
+                        PlayerPrefs.SetString("ClearTime05", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[4] == 1)
@@ -327,11 +314,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(2, 6);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime06", playTime);
-                            PlayerPrefs.SetString("ClearTime06", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime06", playTime);
+                        PlayerPrefs.SetString("ClearTime06", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[5] == 1)
@@ -358,11 +342,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(2, 7);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime07", playTime);
-                            PlayerPrefs.SetString("ClearTime07", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime07", playTime);
+                        PlayerPrefs.SetString("ClearTime07", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[6] == 1)
@@ -389,11 +370,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(2, 8);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime08", playTime);
-                            PlayerPrefs.SetString("ClearTime08", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime08", playTime);
+                        PlayerPrefs.SetString("ClearTime08", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[7] == 1)
@@ -420,11 +398,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(2, 9);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime09", playTime);
-                            PlayerPrefs.SetString("ClearTime09", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime09", playTime);
+                        PlayerPrefs.SetString("ClearTime09", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[8] == 1)
@@ -449,11 +424,8 @@ public class StageManager : MonoBehaviour
                         playerState.Instance().gold += plusGold;
                         plusSpringStone = Random.Range(4, 9);
                         playerState.Instance().springStone += plusSpringStone;
-                        if (lastPlayTime > playTime)
-                        {
-                            PlayerPrefs.SetFloat("playTime10", playTime);
-                            PlayerPrefs.SetString("ClearTime10", timeStr);
-                        }
+                        PlayerPrefs.SetFloat("playTime10", playTime);
+                        PlayerPrefs.SetString("ClearTime10", timeStr);
                     }
 
                     if (playerState.Instance().springSTClearBool[9] == 1)

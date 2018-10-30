@@ -3066,8 +3066,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 4.5, z: 1.4}
-  m_Center: {x: 0, y: 2.2, z: 0}
+  m_Size: {x: 1.3, y: 3, z: 1.4}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!111 &111009658598059836
 Animation:
   m_ObjectHideFlags: 1
@@ -3104,8 +3104,6 @@ MonoBehaviour:
   ladderCol: 0
   magicSkill: {fileID: 1554949460300414, guid: eab1cedf938a61244ae25b7c06c0ee23, type: 2}
   magicPos: {fileID: 4265494733514410}
-  attackCool: 0.3
-  attackTime: 0
   playerCamera: {fileID: 0}
   oriTime: 0
   ShakeTime: 0.5
@@ -3124,7 +3122,6 @@ MonoBehaviour:
   Down: 0
   Left: 0
   Right: 0
-  Attack: 0
 --- !u!137 &137694005504935314
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

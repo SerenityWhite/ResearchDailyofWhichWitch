@@ -14,11 +14,22 @@ public class StartSC : MonoBehaviour
 
 	void Update ()
     {
-		if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(!PlayerPrefs.HasKey("UserName"))
         {
-            NamingBox.SetActive(true);
-            ClickSound.SetActive(true);
-            gameObject.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                NamingBox.SetActive(true);
+                ClickSound.SetActive(true);
+                gameObject.SetActive(false);
+            }
+        }
+
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Application.LoadLevel(1);
+            }
         }
 	}
 }

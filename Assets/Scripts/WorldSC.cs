@@ -9,6 +9,7 @@ public class WorldSC : MonoBehaviour
     public GameObject SpringSTList;
     public GameObject witch;
     public GameObject world;
+    public GameObject Exit;
 
 	void Start ()
     {
@@ -17,8 +18,21 @@ public class WorldSC : MonoBehaviour
 
 	void Update ()
     {
-		
-	}
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Exit.SetActive(true);
+        }
+    }
+
+    public void ExitYes()
+    {
+        Application.Quit();
+    }
+
+    public void ExitNo()
+    {
+        Exit.SetActive(false);
+    }
 
     public void WitchHouseHover()
     {

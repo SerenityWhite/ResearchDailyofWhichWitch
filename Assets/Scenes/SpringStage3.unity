@@ -2277,7 +2277,7 @@ MonoBehaviour:
   mHeight: 52
   mDepth: 2
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.1153846
@@ -2307,7 +2307,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 58, y: 52, z: 0}
+  m_Size: {x: 75, y: 75, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &276118282
 MonoBehaviour:
@@ -3496,7 +3496,7 @@ MonoBehaviour:
   mHeight: 52
   mDepth: 2
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.1153846
@@ -3526,7 +3526,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 58, y: 52, z: 0}
+  m_Size: {x: 75, y: 75, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &470671237
 MonoBehaviour:
@@ -5153,8 +5153,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630815245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -513, y: -235, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -490, y: -218, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 470671234}
   - {fileID: 961524688}
@@ -6147,7 +6147,7 @@ Transform:
   m_GameObject: {fileID: 726008927}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.3949997, y: -0.38100013, z: -0.45}
-  m_LocalScale: {x: 0.3000001, y: 0.03, z: 0.03000001}
+  m_LocalScale: {x: 0.3, y: 0.03, z: 0.03000001}
   m_Children:
   - {fileID: 1128711251}
   - {fileID: 1989074169}
@@ -6190,7 +6190,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9, y: 4, z: 8}
+  m_Size: {x: 2.9, y: 4, z: 3}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!54 &726008931
 Rigidbody:
@@ -7100,7 +7100,7 @@ Transform:
   m_GameObject: {fileID: 823020783}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.3950001, y: -0.38100004, z: -0.45}
-  m_LocalScale: {x: 0.3000001, y: 0.03, z: 0.03000001}
+  m_LocalScale: {x: 0.3, y: 0.03, z: 0.03000001}
   m_Children:
   - {fileID: 1490152770}
   - {fileID: 235191169}
@@ -7143,7 +7143,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9, y: 4, z: 8}
+  m_Size: {x: 2.9, y: 4, z: 3}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!54 &823020787
 Rigidbody:
@@ -7930,7 +7930,7 @@ MonoBehaviour:
   mHeight: 52
   mDepth: 2
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.1153846
@@ -7960,7 +7960,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 58, y: 52, z: 0}
+  m_Size: {x: 75, y: 75, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &961524691
 MonoBehaviour:
@@ -8103,11 +8103,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4179638142644982, guid: cf87896f3c618624f82729a8b406ec9a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.3000001
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4179638142644982, guid: cf87896f3c618624f82729a8b406ec9a, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.3000001
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1975614390399986, guid: cf87896f3c618624f82729a8b406ec9a, type: 2}
       propertyPath: m_Name
@@ -8122,6 +8122,11 @@ Prefab:
         type: 2}
       propertyPath: enemyHp
       value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 65729545359682394, guid: cf87896f3c618624f82729a8b406ec9a,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf87896f3c618624f82729a8b406ec9a, type: 2}
@@ -10294,7 +10299,7 @@ MonoBehaviour:
   mHeight: 52
   mDepth: 2
   mMat: {fileID: 0}
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.1153846
@@ -10324,7 +10329,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 58, y: 52, z: 0}
+  m_Size: {x: 75, y: 75, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1237753167
 MonoBehaviour:
@@ -13428,7 +13433,7 @@ Transform:
   m_GameObject: {fileID: 1647150417}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.3949997, y: -0.38100013, z: -0.45}
-  m_LocalScale: {x: 0.3000001, y: 0.03, z: 0.03000001}
+  m_LocalScale: {x: 0.3, y: 0.03, z: 0.03000001}
   m_Children:
   - {fileID: 1608164609}
   - {fileID: 571460810}
@@ -13471,7 +13476,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9, y: 4, z: 8}
+  m_Size: {x: 2.9, y: 4, z: 3}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!54 &1647150421
 Rigidbody:
@@ -14728,7 +14733,7 @@ Transform:
   m_GameObject: {fileID: 1905814988}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.3950001, y: -0.38100004, z: -0.45}
-  m_LocalScale: {x: 0.3000001, y: 0.03, z: 0.03000001}
+  m_LocalScale: {x: 0.3, y: 0.03, z: 0.03000001}
   m_Children:
   - {fileID: 683521572}
   - {fileID: 1410295524}
@@ -14771,7 +14776,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9, y: 4, z: 8}
+  m_Size: {x: 2.9, y: 4, z: 3}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!54 &1905814992
 Rigidbody:
@@ -16234,11 +16239,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4179638142644982, guid: cf87896f3c618624f82729a8b406ec9a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.30000058
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4179638142644982, guid: cf87896f3c618624f82729a8b406ec9a, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.30000058
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 65729545359682394, guid: cf87896f3c618624f82729a8b406ec9a,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf87896f3c618624f82729a8b406ec9a, type: 2}
