@@ -2594,6 +2594,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!114 &114400842761284906
 MonoBehaviour:
   m_ObjectHideFlags: 1

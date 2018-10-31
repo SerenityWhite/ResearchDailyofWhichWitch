@@ -6,6 +6,8 @@ public class StartSC : MonoBehaviour
 {
     public GameObject NamingBox;
     public GameObject ClickSound;
+    public float playTime;
+    public float loadTime;
 
     void Start ()
     {
@@ -14,6 +16,8 @@ public class StartSC : MonoBehaviour
 
 	void Update ()
     {
+        playTime += Time.deltaTime;
+
         if(!PlayerPrefs.HasKey("UserName"))
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -26,9 +30,12 @@ public class StartSC : MonoBehaviour
 
         else
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if(playTime > loadTime)
             {
-                Application.LoadLevel(1);
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    Application.LoadLevel(1);
+                }
             }
         }
 	}

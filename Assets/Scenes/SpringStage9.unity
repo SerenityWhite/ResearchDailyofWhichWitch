@@ -5063,6 +5063,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 275
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &252989232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6449,6 +6452,7 @@ MonoBehaviour:
   timeTX: {fileID: 1342403367}
   goldTX: {fileID: 399298674}
   springStoneTX: {fileID: 1426032266}
+  stageNum: 0
 --- !u!1 &348628366
 GameObject:
   m_ObjectHideFlags: 0
@@ -10261,6 +10265,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 240
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &574914792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10425,7 +10432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4374233616729910, guid: 000187ed77955394fbfac52e31a20ae5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 44.32
+      value: 44.362
       objectReference: {fileID: 0}
     - target: {fileID: 4374233616729910, guid: 000187ed77955394fbfac52e31a20ae5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22497,6 +22504,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 240
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1223890800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25993,13 +26003,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1379158966}
   m_LocalRotation: {x: 0, y: -0, z: -3.2642105e-17, w: 1}
-  m_LocalPosition: {x: 36, y: 66.45, z: 0.65}
+  m_LocalPosition: {x: 36, y: 66.468, z: 0.65}
   m_LocalScale: {x: 0.8, y: 0.4, z: 0.5}
   m_Children:
   - {fileID: 139769167}
   - {fileID: 1544239990}
   - {fileID: 1395257186}
   - {fileID: 1096750920}
+  - {fileID: 1638028169}
   m_Father: {fileID: 1752495802}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26014,7 +26025,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 6.4, z: 2}
+  m_Size: {x: 0.8, y: 6, z: 2}
   m_Center: {x: -0.4, y: 3, z: -3.1}
 --- !u!1 &1392326785
 GameObject:
@@ -27934,6 +27945,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 140
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 0
 --- !u!65 &1464069101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30748,6 +30762,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 275
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1601705659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31345,6 +31362,47 @@ MonoBehaviour:
   mFill: 0
   numberOfSteps: 0
   onChange: []
+--- !u!1 &1638028168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638028169}
+  - component: {fileID: 1638028170}
+  m_Layer: 0
+  m_Name: LadderDown
+  m_TagString: LadderDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1638028169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638028168}
+  m_LocalRotation: {x: -0, y: -0, z: 3.2642105e-17, w: 1}
+  m_LocalPosition: {x: -0.432, y: 6.17, z: -2.3}
+  m_LocalScale: {x: 1.25, y: 2.5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1379158967}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1638028170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638028168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 2, z: 1}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &1649254913
 GameObject:
   m_ObjectHideFlags: 0
@@ -32961,6 +33019,47 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 0.02, z: 1}
   m_Center: {x: 0, y: 0.19, z: 0}
+--- !u!1 &1737499502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737499503}
+  - component: {fileID: 1737499504}
+  m_Layer: 0
+  m_Name: LadderDown
+  m_TagString: LadderDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1737499503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737499502}
+  m_LocalRotation: {x: -0, y: -0, z: 3.2642105e-17, w: 1}
+  m_LocalPosition: {x: -0.432, y: 13.74, z: -2.3}
+  m_LocalScale: {x: 1.2500001, y: 2.5000002, z: 2}
+  m_Children: []
+  m_Father: {fileID: 582747946}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1737499504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737499502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 5, z: 1}
+  m_Center: {x: 0, y: -2.5, z: 0}
 --- !u!1 &1741382546
 GameObject:
   m_ObjectHideFlags: 0
@@ -34017,6 +34116,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 200
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1812574943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35385,6 +35487,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 0
 --- !u!65 &1905814991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37035,6 +37140,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 200
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1984929526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39544,6 +39652,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 175
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 0
 --- !u!65 &2081967114
 BoxCollider:
   m_ObjectHideFlags: 0

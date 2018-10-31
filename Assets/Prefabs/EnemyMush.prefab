@@ -259,6 +259,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 10
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!137 &137115613719635004
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

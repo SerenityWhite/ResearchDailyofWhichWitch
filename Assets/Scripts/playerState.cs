@@ -43,6 +43,16 @@ public class playerState : MonoBehaviour
 
 	void Update ()
     {
+        if (hpPotion < 0)
+            hpPotion = 0;
 
+        if (mpPotion < 0)
+            mpPotion = 0;
+
+        if (gold < 0)
+            gold = 0;
+
+        if (springStone < 0)
+            springStone = 0;
     }
 }

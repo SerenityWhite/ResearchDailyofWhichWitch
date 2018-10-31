@@ -33,7 +33,7 @@ public class ShopSC : MonoBehaviour
         Rank.SetActive(true);
         MenuBox.SetActive(false);
         labelEF.Finish();
-        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 최단 시간 정복! \n한 번 도전해보는 건 어때냥?";
+        ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, 최단 시간 정복! \n한 번 도전해보는 건 어떠냥?";
         labelEF.ResetToBeginning();
         Rank.GetComponent<TweenPosition>().Play(true);
     }
@@ -129,7 +129,7 @@ public class ShopSC : MonoBehaviour
         SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
         SoundSC.Instance().Sound.Play();
 
-        if (playerState.Instance().gold >= 1000)
+        if (playerState.Instance().gold >= 500)
         {
             labelEF.Finish();
             ItemIntroTX.text = "지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드다냥. \n이 정도면 HP 회복약의 합성이 가능하다냥. \n합성할 거냥?";
@@ -140,7 +140,7 @@ public class ShopSC : MonoBehaviour
             itemBuy[3].SetActive(false);
         }
 
-        if (playerState.Instance().gold < 1000)
+        if (playerState.Instance().gold < 500)
         {
             labelEF.Finish();
             ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, HP 회복약을 합성하기엔 골드가 부족하다냥. \n지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드 밖에 안된다냥. \n합성하고 싶으면 월드에서 골드를 더 구해오라냥.";
@@ -157,10 +157,10 @@ public class ShopSC : MonoBehaviour
         SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
         SoundSC.Instance().Sound.Play();
 
-        if (playerState.Instance().gold >= 1000)
+        if (playerState.Instance().gold >= 500)
         {
             itemBuy[0].SetActive(false);
-            playerState.Instance().gold -= 1000;
+            playerState.Instance().gold -= 500;
             playerState.Instance().hpPotion += 1;
             labelEF.Finish();
             ItemIntroTX.text = "HP 회복약 1개 합성 성공이다냥!";
@@ -169,7 +169,7 @@ public class ShopSC : MonoBehaviour
             PlayerPrefs.SetInt("hpPotion", playerState.Instance().hpPotion);
         }
 
-        if(playerState.Instance().gold < 1000)
+        if(playerState.Instance().gold < 500)
         {
             itemBuy[0].SetActive(false);
             itemBuy[1].SetActive(false);
@@ -237,7 +237,7 @@ public class ShopSC : MonoBehaviour
         SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
         SoundSC.Instance().Sound.Play();
 
-        if (playerState.Instance().gold >= 700)
+        if (playerState.Instance().gold >= 300)
         {
             labelEF.Finish();
             ItemIntroTX.text = "지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드다냥. \n이 정도면 MP 회복약의 합성이 가능하다냥. \n합성할 거냥?";
@@ -248,7 +248,7 @@ public class ShopSC : MonoBehaviour
             itemBuy[3].SetActive(false);
         }
 
-        if (playerState.Instance().gold < 700)
+        if (playerState.Instance().gold < 300)
         {
             labelEF.Finish();
             ItemIntroTX.text = PlayerPrefs.GetString("UserName") + "님, MP 회복약을 합성하기엔 골드가 부족하다냥. \n지금 " + PlayerPrefs.GetString("UserName") + "님이 가진 골드는 " + playerState.Instance().gold + "골드 밖에 안된다냥. \n합성하고 싶으면 월드에서 골드를 더 구해오라냥.";
@@ -265,10 +265,10 @@ public class ShopSC : MonoBehaviour
         SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
         SoundSC.Instance().Sound.Play();
 
-        if (playerState.Instance().gold >= 700)
+        if (playerState.Instance().gold >= 300)
         {
             itemBuy[1].SetActive(false);
-            playerState.Instance().gold -= 700;
+            playerState.Instance().gold -= 300;
             playerState.Instance().mpPotion += 1;
             labelEF.Finish();
             ItemIntroTX.text = "MP 회복약 1개 합성 성공이다냥!";
@@ -277,7 +277,7 @@ public class ShopSC : MonoBehaviour
             PlayerPrefs.SetInt("mpPotion", playerState.Instance().mpPotion);
         }
 
-        if (playerState.Instance().gold < 700)
+        if (playerState.Instance().gold < 300)
         {
             itemBuy[0].SetActive(false);
             itemBuy[1].SetActive(false);

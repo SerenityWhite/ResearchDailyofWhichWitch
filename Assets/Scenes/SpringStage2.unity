@@ -716,8 +716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &186740747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,29 +728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &202829846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,8 +1064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &222972882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,29 +1076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &229306126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,8 +1122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &229306129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,29 +1134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &229609656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,6 +1857,7 @@ MonoBehaviour:
   timeTX: {fileID: 1342403367}
   goldTX: {fileID: 399298674}
   springStoneTX: {fileID: 1426032266}
+  stageNum: 0
 --- !u!4 &351559294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4784514364628622, guid: a359dfdb912276e4eb9765bf097c71ae,
@@ -2013,6 +1939,47 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 365609144}
   m_Mesh: {fileID: 4301358, guid: 1151e4dab2f80c34e9c1d9042bbd5b0a, type: 3}
+--- !u!1 &397240139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397240140}
+  - component: {fileID: 397240141}
+  m_Layer: 0
+  m_Name: LadderDown
+  m_TagString: LadderDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397240140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397240139}
+  m_LocalRotation: {x: -0, y: -0, z: 3.2642105e-17, w: 1}
+  m_LocalPosition: {x: -0.42500004, y: 6.225, z: -2.3}
+  m_LocalScale: {x: 1.25, y: 2.5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 575092588}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &397240141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397240139}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 2, z: 1}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &399298672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,8 +2124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Arch_Z
 --- !u!114 &402446415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2171,29 +2136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 2
-  lSide: 1
-  fSide: 10
-  bSide: 10
-  uSide: 1
-  dSide: -1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &408626742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,8 +3085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &566325747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3157,29 +3097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!4 &575092588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4370865467565112, guid: cb473b859eb50724796d4137a3638bf5,
@@ -4777,8 +4694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &782193754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4791,29 +4706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &784252125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5358,8 +5250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &844130313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5372,29 +5262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &851324862
 GameObject:
   m_ObjectHideFlags: 0
@@ -5593,8 +5460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &873007406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5607,29 +5472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1001 &877115655
 Prefab:
   m_ObjectHideFlags: 0
@@ -6446,8 +6288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Arch_Z
 --- !u!114 &1030253678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6460,29 +6300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 2
-  lSide: 1
-  fSide: 10
-  bSide: 10
-  uSide: 1
-  dSide: -1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &1050912284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6672,8 +6489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &1078409507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6686,29 +6501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1001 &1114550250
 Prefab:
   m_ObjectHideFlags: 0
@@ -6864,8 +6656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &1122563516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6878,29 +6668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &1151807436
 GameObject:
   m_ObjectHideFlags: 0
@@ -7120,6 +6887,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 0
 --- !u!65 &1192289507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7402,6 +7172,11 @@ Prefab:
     - target: {fileID: 1740401783146976, guid: cb473b859eb50724796d4137a3638bf5, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65259086869305260, guid: cb473b859eb50724796d4137a3638bf5,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb473b859eb50724796d4137a3638bf5, type: 2}
@@ -9238,8 +9013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &1393078905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9252,29 +9025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &1410295523
 GameObject:
   m_ObjectHideFlags: 0
@@ -9916,8 +9666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &1466438565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9930,29 +9678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &1472829559
 GameObject:
   m_ObjectHideFlags: 0
@@ -10682,8 +10407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _SQ_Square
 --- !u!114 &1678883052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10696,29 +10419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquid: 0
-  TileLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  rTile: {fileID: 0}
-  lTile: {fileID: 0}
-  fTile: {fileID: 0}
-  bTile: {fileID: 0}
-  uTile: {fileID: 0}
-  dTile: {fileID: 0}
-  rSide: 1
-  lSide: 1
-  fSide: 1
-  bSide: 1
-  uSide: 1
-  dSide: 1
-  rSideWorld: 0
-  lSideWorld: 0
-  fSideWorld: 0
-  bSideWorld: 0
-  uSideWorld: 0
-  dSideWorld: 0
-  sideRemovedCounter: 0
 --- !u!1 &1696855629
 GameObject:
   m_ObjectHideFlags: 0
@@ -11637,6 +11337,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1905814991
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -4845,6 +4845,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 275
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &252989232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5441,7 +5444,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 288093495}
   m_LocalRotation: {x: -0, y: -0, z: -3.2642105e-17, w: 1}
-  m_LocalPosition: {x: 51.9, y: 48.51, z: 0.65}
+  m_LocalPosition: {x: 51.9, y: 48.534, z: 0.65}
   m_LocalScale: {x: 0.79999995, y: 0.39999998, z: 0.5}
   m_Children:
   - {fileID: 1760039742}
@@ -5452,6 +5455,7 @@ Transform:
   - {fileID: 552608308}
   - {fileID: 1047605955}
   - {fileID: 1690386984}
+  - {fileID: 1067993528}
   m_Father: {fileID: 1752495802}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5466,7 +5470,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 14.4, z: 2}
+  m_Size: {x: 0.8, y: 14, z: 2}
   m_Center: {x: -0.4, y: 6.6, z: -3.1}
 --- !u!1 &292169202
 GameObject:
@@ -6390,6 +6394,7 @@ MonoBehaviour:
   timeTX: {fileID: 1342403367}
   goldTX: {fileID: 399298674}
   springStoneTX: {fileID: 1426032266}
+  stageNum: 0
 --- !u!4 &351559294
 Transform:
   m_ObjectHideFlags: 0
@@ -10319,6 +10324,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 200
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &574914792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10483,7 +10491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4374233616729910, guid: 000187ed77955394fbfac52e31a20ae5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 37.97
+      value: 37.984
       objectReference: {fileID: 0}
     - target: {fileID: 4374233616729910, guid: 000187ed77955394fbfac52e31a20ae5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -18168,6 +18176,47 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1012021192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012021193}
+  - component: {fileID: 1012021194}
+  m_Layer: 0
+  m_Name: LadderDown
+  m_TagString: LadderDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012021193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012021192}
+  m_LocalRotation: {x: -0, y: -0, z: 3.2642105e-17, w: 1}
+  m_LocalPosition: {x: -0.42, y: 6.14, z: -2.3}
+  m_LocalScale: {x: 1.2500001, y: 2.5000002, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1441338594}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1012021194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012021192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 2, z: 1}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &1013645880
 GameObject:
   m_ObjectHideFlags: 0
@@ -18808,6 +18857,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1f6821c3a5dc49ae834e257df4b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1041719492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041719493}
+  - component: {fileID: 1041719494}
+  m_Layer: 0
+  m_Name: LadderDown
+  m_TagString: LadderDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041719493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041719492}
+  m_LocalRotation: {x: -0, y: -0, z: 3.2642105e-17, w: 1}
+  m_LocalPosition: {x: -0.438, y: 13.678, z: -2.3}
+  m_LocalScale: {x: 1.2500001, y: 2.5000002, z: 2}
+  m_Children: []
+  m_Father: {fileID: 582747946}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1041719494
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041719492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 5, z: 1}
+  m_Center: {x: 0, y: -2.5, z: 0}
 --- !u!1 &1043833296
 GameObject:
   m_ObjectHideFlags: 0
@@ -19395,6 +19485,47 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1067993527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067993528}
+  - component: {fileID: 1067993529}
+  m_Layer: 0
+  m_Name: LadderDown
+  m_TagString: LadderDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1067993528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1067993527}
+  m_LocalRotation: {x: -0, y: -0, z: 3.2642105e-17, w: 1}
+  m_LocalPosition: {x: -0.429, y: 13.68, z: -2.3}
+  m_LocalScale: {x: 1.2500001, y: 2.5000002, z: 2}
+  m_Children: []
+  m_Father: {fileID: 288093496}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1067993529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1067993527}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 5, z: 1}
+  m_Center: {x: 0, y: -2.5, z: 0}
 --- !u!1 &1070368170
 GameObject:
   m_ObjectHideFlags: 0
@@ -26204,6 +26335,7 @@ Transform:
   - {fileID: 1160802426}
   - {fileID: 1904910272}
   - {fileID: 1927631923}
+  - {fileID: 1012021193}
   m_Father: {fileID: 1752495802}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26218,7 +26350,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 6.4, z: 2}
+  m_Size: {x: 0.8, y: 6, z: 2}
   m_Center: {x: -0.4, y: 3, z: -3.1}
 --- !u!1 &1442220598
 GameObject:
@@ -29961,7 +30093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyState: 0
-  moveSpeed: 0.1
+  moveSpeed: 0.08
   mushAnim: {fileID: 0}
   offsetX: 14
   startPosX: 0
@@ -29973,6 +30105,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 140
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1647150420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32305,6 +32440,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 200
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1812574943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33421,6 +33559,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1905814991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34546,6 +34687,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 240
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1984929526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36802,6 +36946,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 175
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &2081967114
 BoxCollider:
   m_ObjectHideFlags: 0

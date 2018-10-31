@@ -462,7 +462,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 6.4, z: 2}
+  m_Size: {x: 0.8, y: 6, z: 2}
   m_Center: {x: -0.4, y: 3, z: -3.1}
 --- !u!114 &114249438760091160
 MonoBehaviour:
@@ -475,8 +475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _OB_Ladder01
 --- !u!114 &114374802756241360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,8 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _OB_Ladder01
 --- !u!114 &114665363080310158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -501,8 +497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _OB_Ladder01
 --- !u!114 &114714085318980340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,5 +508,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030efd0463493fe499304f6a475a6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: SummerDark
-  objectName: _OB_Ladder01

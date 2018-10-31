@@ -27,6 +27,9 @@ public class EnemyScript : MonoBehaviour
     public float hittedTime;
     public int enemyDamage;
     public float enemyHp;
+    public bool playerHit = false;
+    public float enemyTimeAttack;
+    public float hitTime;
 
     void Start ()
     {
@@ -96,12 +99,25 @@ public class EnemyScript : MonoBehaviour
             default:
                 break;
         }
+
+        if(playerHit == true)
+        {
+            enemyTimeAttack += Time.deltaTime;
+            if(enemyTimeAttack > hitTime)
+            {
+                EnemySound.Instance().enemySound.clip = EnemySound.Instance().EnemyAttack;
+                EnemySound.Instance().enemySound.Play();
+                CharacterSC.Instance().playerHP -= enemyDamage;
+                enemyState = ENEMYSTATE.Attack;
+                enemyTimeAttack = 0;
+            }
+        }
     }
 
     IEnumerator DeathDelay()
     {
         mushAnim.Play("Death");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         gameObject.SetActive(false);
         StageManager.Instance().deadEnemy++;
     }
@@ -110,10 +126,8 @@ public class EnemyScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            EnemySound.Instance().enemySound.clip = EnemySound.Instance().EnemyAttack;
-            EnemySound.Instance().enemySound.Play();
             CharacterSC.Instance().playerHP -= enemyDamage;
-            enemyState = ENEMYSTATE.Attack;
+            playerHit = true;
         }
 
         if(other.gameObject.tag == "Magic")
@@ -128,6 +142,8 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            playerHit = false;
+
             if (targetPos.position.x > transform.position.x)
             {
                 enemyState = ENEMYSTATE.RunR;

@@ -1540,6 +1540,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NamingBox: {fileID: 1129523063}
   ClickSound: {fileID: 360083856}
+  playTime: 0
+  loadTime: 1
 --- !u!1 &1509613970
 GameObject:
   m_ObjectHideFlags: 0

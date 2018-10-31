@@ -226,6 +226,11 @@ public class CharacterSC : MonoBehaviour
         {
             ladderCol = true;
         }
+        
+        if(other.gameObject.tag == "LadderDown")
+        {
+            ladderCol = true;
+        }
 
         if (other.gameObject.tag == "Enemy")
         {
@@ -247,6 +252,13 @@ public class CharacterSC : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, -0.5f);
         }
 
+        if (other.gameObject.tag == "LadderDown")
+        {
+            ladderCol = false;
+            rigidBody.useGravity = true;
+            transform.position = new Vector3(transform.position.x, transform.position.y, -0.5f);
+        }
+
         if (other.gameObject.tag == "Goal")
         {
             StageManager.Instance().goal = false;
@@ -255,14 +267,20 @@ public class CharacterSC : MonoBehaviour
 
     public void HpUp()
     {
-        playerState.Instance().hpPotion -= 1;
-        playerHP += 10;
+        if(playerState.Instance().hpPotion >= 1)
+        {
+            playerState.Instance().hpPotion -= 1;
+            playerHP += 30;
+        }
     }
 
     public void MpUp()
     {
-        playerState.Instance().mpPotion -= 1;
-        playerMP += 30;
+        if (playerState.Instance().mpPotion >= 1)
+        {
+            playerState.Instance().mpPotion -= 1;
+            playerMP += 30;
+        }
     }
 
     public void UpKey()

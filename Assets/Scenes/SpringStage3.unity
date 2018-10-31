@@ -2578,6 +2578,7 @@ MonoBehaviour:
   timeTX: {fileID: 1342403367}
   goldTX: {fileID: 399298674}
   springStoneTX: {fileID: 1426032266}
+  stageNum: 0
 --- !u!4 &351559294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4784514364628622, guid: a359dfdb912276e4eb9765bf097c71ae,
@@ -6179,6 +6180,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 140
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &726008930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7132,6 +7136,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &823020786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9867,6 +9874,11 @@ Prefab:
     - target: {fileID: 1740401783146976, guid: cb473b859eb50724796d4137a3638bf5, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65259086869305260, guid: cb473b859eb50724796d4137a3638bf5,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb473b859eb50724796d4137a3638bf5, type: 2}
@@ -13465,6 +13477,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 140
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1647150420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14765,6 +14780,9 @@ MonoBehaviour:
   hittedTime: 0.5
   enemyDamage: 15
   enemyHp: 100
+  playerHit: 0
+  enemyTimeAttack: 0
+  hitTime: 1
 --- !u!65 &1905814991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16316,6 +16334,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 2eb298965c93b30468c5788331a5cc83,
     type: 2}
   m_PrefabInternal: {fileID: 2080766659}
+--- !u!1 &2081682414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081682415}
+  - component: {fileID: 2081682416}
+  m_Layer: 0
+  m_Name: LadderDown
+  m_TagString: LadderDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2081682415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081682414}
+  m_LocalRotation: {x: -0, y: -0, z: 3.2642105e-17, w: 1}
+  m_LocalPosition: {x: -0.42500004, y: 6.225, z: -2.3}
+  m_LocalScale: {x: 1.25, y: 2.5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 575092588}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2081682416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081682414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 2, z: 1}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &2108392935
 GameObject:
   m_ObjectHideFlags: 0

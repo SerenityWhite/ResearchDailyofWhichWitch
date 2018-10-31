@@ -3412,7 +3412,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3bea81dbf42c8a543b6ec0f9153df34c, type: 3}
   mFont: {fileID: 0}
-  mText: CLEAR TIME RANK
+  mText: BEST CLEAR TIME
   mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
@@ -7599,7 +7599,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3bea81dbf42c8a543b6ec0f9153df34c, type: 3}
   mFont: {fileID: 0}
-  mText: 1000
+  mText: 500
   mFontSize: 40
   mFontStyle: 0
   mAlignment: 1
@@ -13838,7 +13838,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 35bb7fd561f996540ac8b54a3c58c3cf, type: 3}
   mFont: {fileID: 0}
-  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 10\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
+  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 30\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
     \uC90D\uB2C8\uB2E4."
   mFontSize: 15
   mFontStyle: 0
@@ -16692,7 +16692,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 35bb7fd561f996540ac8b54a3c58c3cf, type: 3}
   mFont: {fileID: 0}
-  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 10\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
+  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 30\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
     \uC90D\uB2C8\uB2E4."
   mFontSize: 15
   mFontStyle: 0
@@ -18857,7 +18857,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3bea81dbf42c8a543b6ec0f9153df34c, type: 3}
   mFont: {fileID: 0}
-  mText: "\uD50C\uB808\uC774\n\uB7AD\uD0B9"
+  mText: "\uD50C\uB808\uC774\n\uD0C0\uC784\uAE30\uB85D"
   mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
@@ -20362,7 +20362,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3bea81dbf42c8a543b6ec0f9153df34c, type: 3}
   mFont: {fileID: 0}
-  mText: 700
+  mText: 300
   mFontSize: 40
   mFontStyle: 0
   mAlignment: 1
@@ -21102,7 +21102,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 35bb7fd561f996540ac8b54a3c58c3cf, type: 3}
   mFont: {fileID: 0}
-  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 10\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
+  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 30\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
     \uC90D\uB2C8\uB2E4."
   mFontSize: 25
   mFontStyle: 0
@@ -21618,7 +21618,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 35bb7fd561f996540ac8b54a3c58c3cf, type: 3}
   mFont: {fileID: 0}
-  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 10\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
+  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 30\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
     \uC90D\uB2C8\uB2E4."
   mFontSize: 15
   mFontStyle: 0
@@ -23345,7 +23345,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 35bb7fd561f996540ac8b54a3c58c3cf, type: 3}
   mFont: {fileID: 0}
-  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 10\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
+  mText: "\uCE90\uB9AD\uD130\uC758 HP\uB97C 30\uB9CC\uD07C \uC99D\uAC00\uC2DC\uCF1C
     \uC90D\uB2C8\uB2E4."
   mFontSize: 15
   mFontStyle: 0
