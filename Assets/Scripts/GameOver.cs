@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -9,18 +10,29 @@ public class GameOver : MonoBehaviour
 
     void Start ()
     {
-		
+
 	}
 	
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
-            SoundSC.Instance().Sound.Play();
-            stageObj.SetActive(false);
-            stageObjUi.SetActive(false);
-            Application.LoadLevel(1);
-        }
+
+    }
+
+    public void RestartClick()
+    {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+        stageObj.SetActive(false);
+        stageObjUi.SetActive(false);
+        Application.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void WorldClick()
+    {
+        SoundSC.Instance().Sound.clip = SoundSC.Instance().Click;
+        SoundSC.Instance().Sound.Play();
+        stageObj.SetActive(false);
+        stageObjUi.SetActive(false);
+        Application.LoadLevel(1);
     }
 }
